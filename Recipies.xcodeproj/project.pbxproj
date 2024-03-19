@@ -18,6 +18,7 @@
 		148D994A2B9BAD9F008B6A4B /* MealListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 148D99492B9BAD9F008B6A4B /* MealListView.swift */; };
 		148D994C2B9BADA1008B6A4B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 148D994B2B9BADA1008B6A4B /* Assets.xcassets */; };
 		148D99502B9BADA1008B6A4B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 148D994F2B9BADA1008B6A4B /* Preview Assets.xcassets */; };
+		14954D462BAA1A830010C4C3 /* MealDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14954D452BAA1A830010C4C3 /* MealDetailsView.swift */; };
 		14EA2AB42BA93FDC001AD004 /* Meals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14EA2AB32BA93FDC001AD004 /* Meals.swift */; };
 /* End PBXBuildFile section */
 
@@ -35,6 +36,7 @@
 		148D994B2B9BADA1008B6A4B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		148D994D2B9BADA1008B6A4B /* Recipies.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Recipies.entitlements; sourceTree = "<group>"; };
 		148D994F2B9BADA1008B6A4B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		14954D452BAA1A830010C4C3 /* MealDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealDetailsView.swift; sourceTree = "<group>"; };
 		14EA2AB32BA93FDC001AD004 /* Meals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meals.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -53,6 +55,7 @@
 			isa = PBXGroup;
 			children = (
 				148D99492B9BAD9F008B6A4B /* MealListView.swift */,
+				14954D452BAA1A830010C4C3 /* MealDetailsView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -207,6 +210,7 @@
 				143B20F02BA91AA200C50919 /* MealEndpoint.swift in Sources */,
 				143B20EE2BA918E500C50919 /* APIEndpoint.swift in Sources */,
 				143B20F62BA928E900C50919 /* MealService.swift in Sources */,
+				14954D462BAA1A830010C4C3 /* MealDetailsView.swift in Sources */,
 				14EA2AB42BA93FDC001AD004 /* Meals.swift in Sources */,
 				143B20FA2BA92EC000C50919 /* Meal.swift in Sources */,
 				143B20F22BA91D7300C50919 /* APIClient.swift in Sources */,

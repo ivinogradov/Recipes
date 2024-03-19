@@ -19,3 +19,5 @@ struct Meal: Decodable, Identifiable {
 //        case ingredientsAndMeasurements
     }
 }
+
+let testData = Meal(id: "123", name: "Baklava")

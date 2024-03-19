@@ -11,11 +11,16 @@ struct MealListView: View {
     @StateObject var viewModel = MealsViewModel(mealService: MealService())
     
     var body: some View {
-        List(viewModel.meals) { meal in
-            Text(meal.name)
-        }
-        .onAppear {
-            viewModel.fetchMeals()
+        NavigationView {
+            List(viewModel.meals) { meal in
+                NavigationLink(destination: MealDetailsView(meal: meal)) {
+                    Text(meal.name)
+                }
+            }
+            .navigationTitle("Desserts")
+            .onAppear {
+                viewModel.fetchMeals()
+            }
         }
     }
 }
