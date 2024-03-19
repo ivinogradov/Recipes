@@ -12,7 +12,7 @@ struct MealListView: View {
     
     var body: some View {
         NavigationView {
-            List(viewModel.meals) { meal in
+            List(viewModel.meals.sorted(by: { $0.name < $1.name})) { meal in        // sort alphabetically
                 NavigationLink(destination: MealDetailsView(meal: meal)) {
                     Text(meal.name)
                 }
