@@ -10,11 +10,31 @@ import SwiftUI
 struct MealDetailsView: View {
     var meal: Meal
     var body: some View {
-        Text(meal.name)
-        Text(meal.id)
+        VStack {
+            Form {
+                if let ingredients = meal.ingredients {
+                    Section(header: Text("Ingredients").font(.headline)) {
+                        ForEach(Array(ingredients).sorted(by: {$0.0 < $1.0}), id: \.0) { ingredient, measure in
+                            HStack {
+                                Text(ingredient)
+                                Spacer()
+                                Text(measure).foregroundStyle(.secondary)
+                            }
+                        }
+                    }
+                }
+                
+                Section(header: Text("Instructions").font(.headline)) {
+                    Text(meal.instructions ?? "No instructions here. Improvise!")
+                }
+            }
+        }
+        .navigationTitle(meal.name)
     }
 }
 
 #Preview {
-    MealDetailsView(meal: testData)
+    NavigationView {
+        MealDetailsView(meal: testData)
+    }
 }
