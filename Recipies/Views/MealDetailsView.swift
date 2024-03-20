@@ -13,22 +13,30 @@ struct MealDetailsView: View {
     var meal: Meal
     var body: some View {
         VStack {
-            Form {
-                if let ingredients = viewModel.meal?.ingredients {
-                    Section(header: Text("Ingredients").font(.headline)) {
-                        ForEach(Array(ingredients).sorted(by: {$0.0 < $1.0}), id: \.0) { ingredient, measure in
-                            HStack {
-                                Text(ingredient)
-                                Spacer()
-                                Text(measure).foregroundStyle(.secondary)
+            if viewModel.meal?.ingredients != nil ||
+                 viewModel.meal?.instructions != nil {
+                Form {
+                    if let ingredients = viewModel.meal?.ingredients {
+                        Section(header: Text("Ingredients").font(.headline)) {
+                            ForEach(Array(ingredients).sorted(by: {$0.0 < $1.0}), id: \.0) { ingredient, measure in
+                                HStack {
+                                    Text(ingredient)
+                                    Spacer()
+                                    Text(measure).foregroundStyle(.secondary)
+                                }
                             }
                         }
                     }
+                    
+                    Section(header: Text("Instructions").font(.headline)) {
+                        Text(viewModel.meal?.instructions ?? "No instructions here. Improvise!")
+                    }
                 }
-                
-                Section(header: Text("Instructions").font(.headline)) {
-                    Text(viewModel.meal?.instructions ?? "No instructions here. Improvise!")
-                }
+            } else {
+                Spacer()
+                ProgressView("Loading ingredients...")
+                    .progressViewStyle(CircularProgressViewStyle())
+                Spacer()
             }
         }
         .navigationTitle(meal.name)

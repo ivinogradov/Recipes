@@ -12,9 +12,16 @@ struct MealListView: View {
     
     var body: some View {
         NavigationView {
-            List(viewModel.meals.sorted(by: { $0.name < $1.name})) { meal in        // sort alphabetically
-                NavigationLink(destination: MealDetailsView(meal: meal)) {
-                    Text(meal.name)
+            VStack {
+                if viewModel.meals.count == 0 {
+                    ProgressView("Loading desserts...")
+                        .progressViewStyle(CircularProgressViewStyle())
+                } else {
+                    List(viewModel.meals.sorted(by: { $0.name < $1.name})) { meal in        // sort alphabetically
+                        NavigationLink(destination: MealDetailsView(meal: meal)) {
+                            Text(meal.name)
+                        }
+                    }
                 }
             }
             .navigationTitle("Desserts")
