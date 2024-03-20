@@ -15,3 +15,7 @@ includes:
 * Meal name
 * Instructions
 * Ingredients/measurements
+
+## Technologies used
+* **SwiftUI** - built the UI using newer delarative way
+* **Apple Combine** - declarative way of providing asynchronous values to the UI
