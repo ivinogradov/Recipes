@@ -8,11 +8,13 @@
 import SwiftUI
 
 struct MealDetailsView: View {
+    @StateObject var viewModel = MealViewModel(mealService: MealService())
+    
     var meal: Meal
     var body: some View {
         VStack {
             Form {
-                if let ingredients = meal.ingredients {
+                if let ingredients = viewModel.meal?.ingredients {
                     Section(header: Text("Ingredients").font(.headline)) {
                         ForEach(Array(ingredients).sorted(by: {$0.0 < $1.0}), id: \.0) { ingredient, measure in
                             HStack {
@@ -25,11 +27,14 @@ struct MealDetailsView: View {
                 }
                 
                 Section(header: Text("Instructions").font(.headline)) {
-                    Text(meal.instructions ?? "No instructions here. Improvise!")
+                    Text(viewModel.meal?.instructions ?? "No instructions here. Improvise!")
                 }
             }
         }
         .navigationTitle(meal.name)
+        .onAppear {
+            viewModel.fetchMeal(mealId: meal.id)
+        }
     }
 }
 

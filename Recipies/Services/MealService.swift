@@ -8,12 +8,18 @@ import Combine
 
 protocol MealServiceProtocol {
     func getMeals() -> AnyPublisher<Meals, Error>
+    func getMeal(mealId: String) -> AnyPublisher<Meals, Error>
 }
 
-class MealService: MealServiceProtocol {
+struct MealService: MealServiceProtocol {
     let apiClient = URLSessionAPIClient<MealEndpoint>()
     
     func getMeals() -> AnyPublisher<Meals, Error> {
         return apiClient.request(.getMeals)
     }
+    
+    func getMeal(mealId: String) -> AnyPublisher<Meals, any Error> {
+        return apiClient.request(.getMeal(mealId: mealId))
+    }
+    
 }

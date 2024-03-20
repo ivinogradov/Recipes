@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		141E37652BAA60DF002594BF /* MealViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 141E37642BAA60DF002594BF /* MealViewModel.swift */; };
 		143B20EE2BA918E500C50919 /* APIEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 143B20ED2BA918E500C50919 /* APIEndpoint.swift */; };
 		143B20F02BA91AA200C50919 /* MealEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 143B20EF2BA91AA200C50919 /* MealEndpoint.swift */; };
 		143B20F22BA91D7300C50919 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 143B20F12BA91D7300C50919 /* APIClient.swift */; };
@@ -23,6 +24,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		141E37642BAA60DF002594BF /* MealViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealViewModel.swift; sourceTree = "<group>"; };
 		143B20ED2BA918E500C50919 /* APIEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIEndpoint.swift; sourceTree = "<group>"; };
 		143B20EF2BA91AA200C50919 /* MealEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealEndpoint.swift; sourceTree = "<group>"; };
 		143B20F12BA91D7300C50919 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
@@ -73,6 +75,7 @@
 			isa = PBXGroup;
 			children = (
 				143B20F72BA92A4D00C50919 /* MealsViewModel.swift */,
+				141E37642BAA60DF002594BF /* MealViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -211,6 +214,7 @@
 				143B20EE2BA918E500C50919 /* APIEndpoint.swift in Sources */,
 				143B20F62BA928E900C50919 /* MealService.swift in Sources */,
 				14954D462BAA1A830010C4C3 /* MealDetailsView.swift in Sources */,
+				141E37652BAA60DF002594BF /* MealViewModel.swift in Sources */,
 				14EA2AB42BA93FDC001AD004 /* Meals.swift in Sources */,
 				143B20FA2BA92EC000C50919 /* Meal.swift in Sources */,
 				143B20F22BA91D7300C50919 /* APIClient.swift in Sources */,

@@ -7,7 +7,7 @@
 import Foundation
 import Combine
 
-class URLSessionAPIClient<EndpointType: APIEndpoint> : APIClient { // TODO: Check if we can use struct instead
+struct URLSessionAPIClient<EndpointType: APIEndpoint> : APIClient { // TODO: Check if we can use struct instead
     func request<T>(_ endpoint: EndpointType) -> AnyPublisher<T, any Error> where T : Decodable {
         //process query parameters
         var queryItems = [URLQueryItem]()
